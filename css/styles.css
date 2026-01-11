@@ -1000,6 +1000,29 @@ footer .footer-logo img {
         font-size: 3rem;
     }
 
+    /* Mobile Nav Layout: Hamburger Left, Logo Center */
+    .nav-container {
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        /* Balanced 3 columns */
+        align-items: center;
+    }
+
+    .mobile-menu-btn {
+        grid-column: 1;
+        margin-right: 0;
+        /* Remove default margin */
+        justify-self: start;
+    }
+
+    .logo {
+        grid-column: 2;
+        justify-self: center;
+        margin: 0;
+    }
+
+    /* Ensure Nav Links are hidden or handled if logic differs, but they are display:none already */
+
     .page-header h1 {
         font-size: 2.5rem;
     }
