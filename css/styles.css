@@ -1026,4 +1026,45 @@ footer .footer-logo img {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+
+    /* Fix for social grid on mobile */
+    .grid-social {
+        grid-template-columns: 1fr;
+    }
+
+    /* Fix for about section grid on mobile */
+    .grid-about {
+        grid-template-columns: 1fr !important;
+        /* Force override if inline style lingers, but we will remove it */
+    }
+
+    /* Reduce gap on mobile */
+    .grid,
+    .grid-2,
+    .grid-3 {
+        gap: 1.5rem;
+    }
+
+    /* Make property info always visible on mobile */
+    .property-info {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        /* Darker gradient for legibility */
+        padding-bottom: 2rem;
+    }
+}
+
+/* New classes to replace inline styles */
+.grid-social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.grid-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
