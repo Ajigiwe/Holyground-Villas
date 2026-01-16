@@ -199,4 +199,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- 8. Property Popup Modal ---
+    const propertyModal = document.getElementById('propertyModal');
+    if (propertyModal) {
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalClose = document.getElementById('modalClose');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalDescription = document.getElementById('modalDescription');
+
+        // Open Modal
+        document.querySelectorAll('.property-card[data-title]').forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const title = card.getAttribute('data-title');
+                const price = card.getAttribute('data-price');
+                const image = card.getAttribute('data-image');
+                const description = card.getAttribute('data-description');
+
+                modalTitle.textContent = title;
+                modalPrice.textContent = price;
+                modalImg.src = image;
+                modalDescription.textContent = description;
+
+                propertyModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+
+        // Close functions
+        const closeModal = () => {
+            propertyModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && propertyModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
 });

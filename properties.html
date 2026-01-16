@@ -68,7 +68,9 @@
         <div class="container">
             <div class="grid grid-3">
                 <!-- Unit 1 -->
-                <div class="property-card fade-up stagger-1">
+                <div class="property-card fade-up stagger-1" data-title="VILLA TYPE A" data-price="$850,000"
+                    data-image="assets/images/IMG_5129.JPG"
+                    data-description="Experience luxury living in this exclusive Villa Type A located in the heart of the Beverly Hills Triangle. Featuring state-of-the-art amenities, spacious interiors, and breathtaking views.">
                     <img src="assets/images/IMG_5129.JPG" class="property-img" alt="Luxury Villa Unit 1">
                     <div class="property-info">
                         <h3>VILLA TYPE A</h3>
@@ -77,7 +79,9 @@
                 </div>
 
                 <!-- Unit 2 -->
-                <div class="property-card fade-up stagger-2">
+                <div class="property-card fade-up stagger-2" data-title="VILLA TYPE B" data-price="$1,200,000"
+                    data-image="assets/images/IMG_5301.PNG"
+                    data-description="The Villa Type B offers a blend of modern design and classic elegance. Enjoy a private pool, lush gardens, and a prime location steps away from world-class dining.">
                     <img src="assets/images/IMG_5301.PNG" class="property-img" alt="Luxury Villa Unit 2">
                     <div class="property-info">
                         <h3>VILLA TYPE B</h3>
@@ -86,7 +90,9 @@
                 </div>
 
                 <!-- Unit 3 -->
-                <div class="property-card fade-up stagger-3">
+                <div class="property-card fade-up stagger-3" data-title="VILLA TYPE C" data-price="$950,000"
+                    data-image="assets/images/IMG_5304.PNG"
+                    data-description="Designed for the discerning buyer, Villa Type C features an open-concept layout, floor-to-ceiling windows, and premium finishes throughout.">
                     <img src="assets/images/IMG_5304.PNG" class="property-img" alt="Luxury Villa Unit 3">
                     <div class="property-info">
                         <h3>VILLA TYPE C</h3>
@@ -95,7 +101,9 @@
                 </div>
 
                 <!-- Unit 4 -->
-                <div class="property-card fade-up stagger-1">
+                <div class="property-card fade-up stagger-1" data-title="VILLA TYPE A2" data-price="$875,000"
+                    data-image="assets/images/IMG_5311.PNG"
+                    data-description="A sophisticated retreat, Villa Type A2 boasts a rooftop terrace, smart home technology, and exquisite attention to detail in every room.">
                     <img src="assets/images/IMG_5311.PNG" class="property-img" alt="Luxury Villa Unit 4">
                     <div class="property-info">
                         <h3>VILLA TYPE A2</h3>
@@ -104,7 +112,9 @@
                 </div>
 
                 <!-- Unit 5 -->
-                <div class="property-card fade-up stagger-2">
+                <div class="property-card fade-up stagger-2" data-title="THE PENTHOUSE" data-price="$2,500,000"
+                    data-image="assets/images/IMG_5335.PNG"
+                    data-description="The crown jewel of the collection. The Penthouse offers expansive living spaces, panoramic city views, and unparalleled privacy and luxury.">
                     <img src="assets/images/IMG_5335.PNG" class="property-img" alt="Luxury Villa Unit 5">
                     <div class="property-info">
                         <h3>THE PENTHOUSE</h3>
@@ -113,7 +123,9 @@
                 </div>
 
                 <!-- Unit 6 -->
-                <div class="property-card fade-up stagger-3">
+                <div class="property-card fade-up stagger-3" data-title="VILLA TYPE B2" data-price="$1,250,000"
+                    data-image="assets/images/IMG_5336.PNG"
+                    data-description="Villa Type B2 is an architectural masterpiece with sleek lines, warm textures, and seamless indoor-outdoor living spaces perfect for entertaining.">
                     <img src="assets/images/IMG_5336.PNG" class="property-img" alt="Luxury Villa Unit 6">
                     <div class="property-info">
                         <h3>VILLA TYPE B2</h3>
@@ -122,7 +134,9 @@
                 </div>
 
                 <!-- Unit 7 -->
-                <div class="property-card fade-up stagger-1">
+                <div class="property-card fade-up stagger-1" data-title="MODERN LOFT" data-price="$750,000"
+                    data-image="assets/images/IMG_5337.PNG"
+                    data-description="Ideal for the modern urbanite, this Loft features high ceilings, industrial-chic aesthetics, and easy access to the vibrant neighborhood.">
                     <img src="assets/images/IMG_5337.PNG" class="property-img" alt="Luxury Villa Unit 7">
                     <div class="property-info">
                         <h3>MODERN LOFT</h3>
@@ -131,7 +145,9 @@
                 </div>
 
                 <!-- Unit 8 -->
-                <div class="property-card fade-up stagger-2">
+                <div class="property-card fade-up stagger-2" data-title="EXECUTIVE SUITE" data-price="$1,500,000"
+                    data-image="assets/images/IMG_5338.PNG"
+                    data-description="The Executive Suite combines workplace efficiency with residential comfort. Perfect for professionals who demand the best in life and work.">
                     <img src="assets/images/IMG_5338.PNG" class="property-img" alt="Luxury Villa Unit 8">
                     <div class="property-info">
                         <h3>EXECUTIVE SUITE</h3>
@@ -140,7 +156,9 @@
                 </div>
 
                 <!-- Unit 9 -->
-                <div class="property-card fade-up stagger-3">
+                <div class="property-card fade-up stagger-3" data-title="VILLA TYPE C2" data-price="$975,000"
+                    data-image="assets/images/IMG_5340.PNG"
+                    data-description="Villa Type C2 offers a tranquil sanctuary with spa-inspired bathrooms, a gourmet kitchen, and a serene private garden.">
                     <img src="assets/images/IMG_5340.PNG" class="property-img" alt="Luxury Villa Unit 9">
                     <div class="property-info">
                         <h3>VILLA TYPE C2</h3>
@@ -225,6 +243,23 @@
             <p class="copyright">&copy; 2026 Holyground Villas. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Property Popup Modal -->
+    <div class="property-modal" id="propertyModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <img src="" alt="Property Image" class="modal-img" id="modalImg">
+                <div class="modal-info">
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <a href="contact.html" class="btn btn-primary modal-contact-btn">Contact Us for More Info</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
