@@ -23,44 +23,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clone the button for mobile
     const themeBtnMobile = themeBtn.cloneNode(true);
 
-    // Add event listener to clone (since cloning doesn't copy listeners)
+    // SVG Strings
+    const moonIcon = `
+        <svg class="theme-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+        </svg>
+    `;
+
+    const sunIcon = `
+        <svg class="theme-icon" viewBox="0 2 20 20" fill="currentColor">
+            <path d="M12 6c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/>
+            <path d="M12 2c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1s1-.4 1-1V3c0-.6-.4-1-1-1zm0 18c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1s1-.4 1-1v-2c0-.6-.4-1-1-1zm6-12c.3-.3.3-.8 0-1.1l-1.4-1.4c-.3-.3-.8-.3-1.1 0-.3.3-.3.8 0 1.1l1.4 1.4c.3.3.8.3 1.1 0zm-11.4 8.6c.3.3.8.3 1.1 0l1.4-1.4c.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0l-1.4 1.4c-.3.3-.3.8 0 1.1zm11.4 0l-1.4 1.4c-.3.3-.3.8 0 1.1.3.3.8.3 1.1 0l1.4-1.4c.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0zm-8.6-8.6l-1.4-1.4c-.3-.3-.8-.3-1.1 0-.3.3-.3.8 0 1.1l1.4 1.4c.3.3.8.3 1.1 0 .3-.3.3-.8 0-1.1zM2 12c0 .6.4 1 1 1h2c.6 0 1-.4 1-1s-.4-1-1-1H3c-.6 0-1 .4-1 1zm18 0c0 .6.4 1 1 1h2c.6 0 1-.4 1-1s-.4-1-1-1h-2c-.6 0-1 .4-1 1z"/>
+        </svg>
+    `;
+
+    // Append event listener to cloned button
     themeBtnMobile.addEventListener('click', () => {
-        if (document.body.getAttribute('data-theme') === 'dark') {
-            document.body.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-            themeBtn.innerHTML = '<i class="fa-regular fa-moon"></i>';
-            themeBtnMobile.innerHTML = '<i class="fa-regular fa-moon"></i>';
-        } else {
-            document.body.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            themeBtn.innerHTML = '<i class="fa-regular fa-sun"></i>';
-            themeBtnMobile.innerHTML = '<i class="fa-regular fa-sun"></i>';
-        }
+        toggleTheme();
     });
 
-    navItemMobile.appendChild(themeBtnMobile);
-    if (mobileNavLinks) mobileNavLinks.appendChild(navItemMobile);
-
-    // Initial Icon State
-    const updateIcons = () => {
-        const icon = document.body.getAttribute('data-theme') === 'dark'
-            ? '<i class="fa-regular fa-sun"></i>'
-            : '<i class="fa-regular fa-moon"></i>';
-
-        themeBtn.innerHTML = icon;
-        themeBtnMobile.innerHTML = icon;
-    };
-    updateIcons();
-
-    // Check Local Storage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.setAttribute('data-theme', 'dark');
-    }
-    updateIcons(); // Update icons based on saved theme
-
-    // Toggle Event for Desktop
     themeBtn.addEventListener('click', () => {
+        toggleTheme();
+    });
+
+    function toggleTheme() {
         if (document.body.getAttribute('data-theme') === 'dark') {
             document.body.removeAttribute('data-theme');
             localStorage.setItem('theme', 'light');
@@ -69,7 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'dark');
         }
         updateIcons();
-    });
+    }
+
+    // Initial Icon State
+    function updateIcons() {
+        const icon = document.body.getAttribute('data-theme') === 'dark' ? sunIcon : moonIcon;
+        themeBtn.innerHTML = icon;
+        themeBtnMobile.innerHTML = icon;
+    }
+
+    // Check Local Storage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+    }
+    updateIcons();
 
 
     // --- 1. Reveal Animations (Scroll Observer) ---
