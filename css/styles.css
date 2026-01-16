@@ -472,24 +472,10 @@ nav:not(.scrolled) .theme-toggle:hover i {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%;
-    /* Taller for parallax */
+    height: 100%;
     background-size: cover;
     background-position: center;
     z-index: -1;
-    transform: translateY(0) scale(1.1);
-    /* Slight zoom start */
-    animation: zoomBg 20s infinite alternate ease-in-out;
-}
-
-@keyframes zoomBg {
-    from {
-        transform: translateY(0) scale(1.1);
-    }
-
-    to {
-        transform: translateY(-20px) scale(1.15);
-    }
 }
 
 .hero-overlay {
