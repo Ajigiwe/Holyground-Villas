@@ -202,16 +202,14 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.2rem 0;
-    /* Reduced from 1.5rem */
+    padding: 1.5rem 0;
     background: rgba(255, 255, 255, 0.0);
     transition: all 0.4s ease;
 }
 
 nav.scrolled {
     background: rgba(255, 255, 255, 0.9);
-    padding: 0.8rem 0;
-    /* Reduced from 1rem */
+    padding: 1rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
 }
@@ -226,10 +224,8 @@ nav.scrolled {
 
 .nav-links a {
     text-transform: uppercase;
-    font-size: 0.7rem;
-    /* Reduced from 0.75rem */
-    letter-spacing: 0.15em;
-    /* Reduced from 0.2em */
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
     position: relative;
     color: var(--color-text-primary);
     /* Charcoal by default now for light pages */
