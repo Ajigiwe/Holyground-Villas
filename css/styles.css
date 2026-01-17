@@ -257,7 +257,7 @@ nav.scrolled .logo img {
 
 .nav-links {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
     list-style: none;
 }
 
