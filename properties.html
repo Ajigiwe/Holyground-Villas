@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Properties | Holyground Villas</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="assets/images/hero.png" as="image">
 </head>
 
 <body>
@@ -17,7 +15,7 @@
     <nav>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo-v2.png" alt="Holyground Villas">
+                <img src="assets/logo-main.png" alt="Holyground Villas">
             </a>
             <div class="mobile-menu-btn">
                 <span></span>
@@ -27,7 +25,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="properties.html">Available Opportunities</a></li>
+                <li><a href="properties.html">Properties</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
@@ -35,7 +33,7 @@
                 <ul class="mobile-nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="properties.html">Available Opportunities</a></li>
+                    <li><a href="properties.html">Properties</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
@@ -43,12 +41,17 @@
         </div>
     </nav>
 
-    <header class="page-header">
+    <header class="hero">
         <div class="hero-bg" style="background-image: url('assets/images/hero.png');">
         </div>
         <div class="hero-overlay"></div>
-        <div class="reveal-text-wrapper">
-            <h1 class="reveal-text">DISCOVER YOUR<br>DREAM HOME</h1>
+        <div class="hero-content">
+            <div class="fade-up stagger-1">
+                <img src="assets/logo-main.png" alt="Holyground Villas" class="hero-logo-img">
+            </div>
+            <div class="reveal-text-wrapper">
+                <h1 class="reveal-text">DISCOVER YOUR<br>DREAM HOME</h1>
+            </div>
         </div>
     </header>
 
@@ -61,30 +64,30 @@
                     FURNISHED</h2>
                 <div class="grid grid-3">
                     <div class="property-card fade-up stagger-1" data-title="LUXURY FURNISHED VILLA 1"
-                        data-price="$2,500,000" data-image="assets/images/furnished1.PNG"
+                        data-image="assets/images/furnished1.PNG"
                         data-description="Exquisitely furnished villa offering turn-key luxury. Every detail has been curated for immediate comfort and style.">
-                        <img src="assets/images/furnished1.PNG" class="property-img" alt="Furnished Villa 1">
+                        <img src="assets/images/furnished1.PNG" class="property-img" alt="Furnished Villa 1" loading="lazy">
                         <div class="property-info">
                             <h3>LUXURY VILLA 1</h3>
-                            <p>Fully Furnished • $2,500,000</p>
+                            <p>Fully Furnished</p>
                         </div>
                     </div>
                     <div class="property-card fade-up stagger-2" data-title="LUXURY FURNISHED VILLA 2"
-                        data-price="$2,800,000" data-image="assets/images/furnished2.JPG"
+                        data-image="assets/images/furnished2.JPG"
                         data-description="Modern furnished residence with premium Italian furniture and smart home integration.">
-                        <img src="assets/images/furnished2.JPG" class="property-img" alt="Furnished Villa 2">
+                        <img src="assets/images/furnished2.JPG" class="property-img" alt="Furnished Villa 2" loading="lazy">
                         <div class="property-info">
                             <h3>LUXURY VILLA 2</h3>
-                            <p>Fully Furnished • $2,800,000</p>
+                            <p>Fully Furnished</p>
                         </div>
                     </div>
                     <div class="property-card fade-up stagger-3" data-title="LUXURY FURNISHED VILLA 3"
-                        data-price="$3,200,000" data-image="assets/images/furnished3.PNG"
+                        data-image="assets/images/furnished3.PNG"
                         data-description="Spacious family home, fully furnished with elegant decor and high-end appliances.">
-                        <img src="assets/images/furnished3.PNG" class="property-img" alt="Furnished Villa 3">
+                        <img src="assets/images/furnished3.PNG" class="property-img" alt="Furnished Villa 3" loading="lazy">
                         <div class="property-info">
                             <h3>LUXURY VILLA 3</h3>
-                            <p>Fully Furnished • $3,200,000</p>
+                            <p>Fully Furnished</p>
                         </div>
                     </div>
                 </div>
@@ -97,31 +100,31 @@
                     SEMI FURNISHED</h2>
                 <div class="grid grid-3">
                     <div class="property-card fade-up stagger-1" data-title="SEMI FURNISHED TYPE A"
-                        data-price="$1,800,000" data-image="assets/images/semi%20furnished2.jpeg"
+                        data-image="assets/images/semi%20furnished2.jpeg"
                         data-description="A canvas for your creativity. This semi-furnished unit includes fitted wardrobes and kitchen appliances.">
                         <img src="assets/images/semi%20furnished2.jpeg" class="property-img"
-                            alt="Semi Furnished Unit 1">
+                            alt="Semi Furnished Unit 1" loading="lazy">
                         <div class="property-info">
                             <h3>TYPE A RESIDENCE</h3>
-                            <p>Semi Furnished • $1,800,000</p>
+                            <p>Semi Furnished</p>
                         </div>
                     </div>
                     <div class="property-card fade-up stagger-2" data-title="SEMI FURNISHED TYPE B"
-                        data-price="$2,100,000" data-image="assets/images/semi%20furnished3.PNG"
+                        data-image="assets/images/semi%20furnished3.PNG"
                         data-description="Features essential furnishings and fixtures, allowing you to personalize the living spaces.">
-                        <img src="assets/images/semi%20furnished3.PNG" class="property-img" alt="Semi Furnished Unit 2">
+                        <img src="assets/images/semi%20furnished3.PNG" class="property-img" alt="Semi Furnished Unit 2" loading="lazy">
                         <div class="property-info">
                             <h3>TYPE B RESIDENCE</h3>
-                            <p>Semi Furnished • $2,100,000</p>
+                            <p>Semi Furnished</p>
                         </div>
                     </div>
                     <div class="property-card fade-up stagger-3" data-title="SEMI FURNISHED TYPE C"
-                        data-price="$2,300,000" data-image="assets/images/semi%20furnished4.PNG"
+                        data-image="assets/images/semi%20furnished4.PNG"
                         data-description="Semi-furnished luxury apartment with breathtaking city views and modern finishes.">
-                        <img src="assets/images/semi%20furnished4.PNG" class="property-img" alt="Semi Furnished Unit 3">
+                        <img src="assets/images/semi%20furnished4.PNG" class="property-img" alt="Semi Furnished Unit 3" loading="lazy">
                         <div class="property-info">
                             <h3>TYPE C RESIDENCE</h3>
-                            <p>Semi Furnished • $2,300,000</p>
+                            <p>Semi Furnished</p>
                         </div>
                     </div>
                 </div>
@@ -134,21 +137,30 @@
                     UNFURNISHED</h2>
                 <div class="grid grid-3">
                     <div class="property-card fade-up stagger-1" data-title="UNFURNISHED SHELL 1"
-                        data-price="$1,200,000" data-image="assets/images/unfurnished1.jpg"
+                        data-image="assets/images/unfurnished1.jpg"
                         data-description="A raw shell opportunity for complete customization. Design your dream home from the ground up.">
-                        <img src="assets/images/unfurnished1.jpg" class="property-img" alt="Unfurnished Unit 1">
+                        <img src="assets/images/unfurnished1.jpg" class="property-img" alt="Unfurnished Unit 1" loading="lazy">
                         <div class="property-info">
                             <h3>SHELL & CORE 1</h3>
-                            <p>Unfurnished • $1,200,000</p>
+                            <p>Unfurnished</p>
                         </div>
                     </div>
                     <div class="property-card fade-up stagger-2" data-title="UNFURNISHED SHELL 2"
-                        data-price="$1,500,000" data-image="assets/images/unfurnished2.jpg"
+                        data-image="assets/images/unfurnished2.jpg"
                         data-description="Expansive unfurnished space ready for your architectural vision.">
-                        <img src="assets/images/unfurnished2.jpg" class="property-img" alt="Unfurnished Unit 2">
+                        <img src="assets/images/unfurnished2.jpg" class="property-img" alt="Unfurnished Unit 2" loading="lazy">
                         <div class="property-info">
                             <h3>SHELL & CORE 2</h3>
-                            <p>Unfurnished • $1,500,000</p>
+                            <p>Unfurnished</p>
+                        </div>
+                    </div>
+                    <div class="property-card fade-up stagger-3" data-title="UNFURNISHED SHELL 3"
+                        data-image="assets/images/unfurnished4.jpeg"
+                        data-description="A premium shell opportunity featuring expansive grounds and a commanding street presence, perfect for a bespoke architectural masterpiece.">
+                        <img src="assets/images/unfurnished4.jpeg" class="property-img" alt="Unfurnished Unit 3" loading="lazy">
+                        <div class="property-info">
+                            <h3>SHELL & CORE 3</h3>
+                            <p>Unfurnished</p>
                         </div>
                     </div>
                 </div>
@@ -208,7 +220,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="assets/logo-v2.png" alt="Holyground Villas">
+                        <img src="assets/logo-main.png" alt="Holyground Villas" loading="lazy">
                     </div>
                     <p class="footer-desc">Crafting structures that command attention and define luxury. Holyground
                         Villas stands at the intersection of architectural mastery and elite living.</p>
@@ -226,10 +238,9 @@
                 <div class="footer-col">
                     <h4>CONNECT</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="mailto:info@holygroundvillas.com">info@holygroundvillas.com</a></li>
-                        <li>+1 (310) 555-0199</li>
+                        <li><a href="https://www.instagram.com/holyground_villas?igsh=anloNnJ3Z2cxeTl6" target="_blank">Instagram</a></li>
+                        <li><a href="mailto:holygroundvillas@gmail.com">holygroundvillas@gmail.com</a></li>
+                        <li>+233 54 737 3249</li>
                     </ul>
                 </div>
             </div>

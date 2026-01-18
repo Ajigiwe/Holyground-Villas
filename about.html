@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Holyground Villas</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="assets/images/hero.png" as="image">
 </head>
 
 <body>
@@ -16,7 +15,7 @@
     <nav>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/logo-v2.png" alt="Holyground Villas">
+                <img src="assets/logo-main.png" alt="Holyground Villas">
             </a>
             <div class="mobile-menu-btn">
                 <span></span>
@@ -26,7 +25,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="properties.html">Available Opportunities</a></li>
+                <li><a href="properties.html">Properties</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
@@ -34,7 +33,7 @@
                 <ul class="mobile-nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="properties.html">Available Opportunities</a></li>
+                    <li><a href="properties.html">Properties</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
@@ -42,47 +41,59 @@
         </div>
     </nav>
 
-    <header class="page-header">
+    <header class="hero">
         <div class="hero-bg" style="background-image: url('assets/images/hero.png');">
         </div>
         <div class="hero-overlay"></div>
-        <div class="reveal-text-wrapper">
-            <h1 class="reveal-text">OUR VISION</h1>
+        <div class="hero-content">
+            <div class="fade-up stagger-1">
+                <img src="assets/logo-main.png" alt="Holyground Villas" class="hero-logo-img">
+            </div>
+            <div class="reveal-text-wrapper">
+                <h1 class="reveal-text">OUR VISION</h1>
+            </div>
         </div>
     </header>
 
-    <section class="section-padding" style="padding-bottom: 0;">
+    <section class="section-padding">
         <div class="container">
-            <div class="section-header fade-up">
-                <h2>A LEGACY OF EXCELLENCE</h2>
-                <div class="reveal-text-wrapper">
-                    <p>HolyGround Villas is a boutique real estate development firm focused on the West-African Market.
-                        Holyground was founded by a leadership team who have amassed comprehensive experience in
-                        architecture, engineering, construction management and real estate development. This medley of
-                        technical expertise provides the foundation for effective end-to-end project leadership and
-                        deployment.</p>
+            <div class="grid-about">
+                <div class="fade-up">
+                    <div class="section-header" style="border-left: none; padding-left: 0; margin-bottom: 2rem;">
+                        <span style="letter-spacing: 0.3em; color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: block;">Established Excellence</span>
+                        <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 2rem;">A LEGACY OF<br>COMMANDING<br>STRUCTURES</h2>
+                    </div>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--color-text-primary); margin-bottom: 1.5rem;">
+                        HolyGround Villas is a boutique real estate development firm focused on the West-African Market.
+                    </p>
+                    <p style="color: var(--color-text-secondary); line-height: 1.7;">
+                        Holyground was founded by a leadership team who have amassed comprehensive experience in architecture, engineering, construction management and real estate development. This medley of technical expertise provides the foundation for effective end-to-end project leadership and deployment.
+                    </p>
+                </div>
+                <div class="fade-up stagger-1 about-image-container" style="position: relative; overflow: hidden; border-radius: 4px; box-shadow: var(--shadow-soft);">
+                    <img src="assets/images/facade.png" alt="Holyground Villas Facade" style="width: 100%; height: auto; display: block; transition: transform 0.8s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding" style="background: var(--color-surface);">
         <div class="container">
             <div class="grid grid-3">
-                <div class="service-card fade-up stagger-1">
-                    <h3>THE PHILOSOPHY</h3>
-                    <p>We believe in "Structures That Command". Every line, every material, and every finish is chosen
-                        to exude power and elegance.</p>
+                <div class="fade-up stagger-1" style="padding: 3rem; border: 1px solid rgba(0,0,0,0.05); background: #fff;">
+                    <i class="fa-solid fa-compass-drafting" style="font-size: 2rem; color: var(--color-accent); margin-bottom: 2rem; display: block;"></i>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; letter-spacing: 0.05em;">THE PHILOSOPHY</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">We believe in "Structures That Command". Every line, every material, and every finish is chosen to exude power, permanence, and elegance.</p>
                 </div>
-                <div class="service-card fade-up stagger-2">
-                    <h3>THE PRECISION</h3>
-                    <p>Our construction standards exceed industry norms. We don't just build; we craft enduring
-                        landmarks that stand the test of time.</p>
+                <div class="fade-up stagger-2" style="padding: 3rem; border: 1px solid rgba(0,0,0,0.05); background: #fff;">
+                    <i class="fa-solid fa-microscope" style="font-size: 2rem; color: var(--color-accent); margin-bottom: 2rem; display: block;"></i>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; letter-spacing: 0.05em;">THE PRECISION</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Our construction standards exceed industry norms. We utilize advanced engineering and meticulous craftsmanship to create enduring landmarks.</p>
                 </div>
-                <div class="service-card fade-up stagger-3">
-                    <h3>THE EXPERIENCE</h3>
-                    <p>From the first consultation to the final handover, our clients experience white-glove service
-                        tailored to the elite.</p>
+                <div class="fade-up stagger-3" style="padding: 3rem; border: 1px solid rgba(0,0,0,0.05); background: #fff;">
+                    <i class="fa-solid fa-crown" style="font-size: 2rem; color: var(--color-accent); margin-bottom: 2rem; display: block;"></i>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; letter-spacing: 0.05em;">THE EXPERIENCE</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">From initial consultation to final handover, our clients receive a bespoke, white-glove service tailored to the requirements of the elite.</p>
                 </div>
             </div>
         </div>
@@ -95,7 +106,7 @@
             <div class="footer-grid">
                 <div class="footer-col fade-up stagger-1">
                     <div class="footer-logo">
-                        <img src="assets/logo-v2.png" alt="Holyground Villas">
+                        <img src="assets/logo-main.png" alt="Holyground Villas" loading="lazy">
                     </div>
                     <p class="footer-desc">Crafting structures that command attention and define luxury. Holyground
                         Villas stands at the intersection of architectural mastery and elite living.</p>
@@ -113,10 +124,9 @@
                 <div class="footer-col fade-up stagger-3">
                     <h4>CONNECT</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="mailto:info@holygroundvillas.com">info@holygroundvillas.com</a></li>
-                        <li>+1 (310) 555-0199</li>
+                        <li><a href="https://www.instagram.com/holyground_villas?igsh=anloNnJ3Z2cxeTl6" target="_blank">Instagram</a></li>
+                        <li><a href="mailto:holygroundvillas@gmail.com">holygroundvillas@gmail.com</a></li>
+                        <li>+233 54 737 3249</li>
                     </ul>
                 </div>
             </div>

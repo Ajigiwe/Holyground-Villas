@@ -33,9 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = bg.parentElement.getBoundingClientRect();
             // Only animate if the hero is in/near the viewport
             if (rect.bottom > 0) {
-                const speed = 0.4;
-                // We add a subtle scale during parallax to prevent edges from showing
-                bg.style.transform = `translateY(${scrolled * speed}px) scale(1.1)`;
+                // Parallax disabled for 'contain' images to prevent edges from breaking
+                // bg.style.transform = `translateY(${scrolled * 0.4}px) scale(1.1)`;
             }
         });
     });
@@ -153,12 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
 
                 const title = card.getAttribute('data-title');
-                const price = card.getAttribute('data-price');
+                const price = card.getAttribute('data-price') || '';
                 const image = card.getAttribute('data-image');
                 const description = card.getAttribute('data-description');
 
                 modalTitle.textContent = title;
                 modalPrice.textContent = price;
+                if (!price) {
+                    modalPrice.style.display = 'none';
+                } else {
+                    modalPrice.style.display = 'block';
+                }
                 modalImg.src = image;
                 modalDescription.textContent = description;
 

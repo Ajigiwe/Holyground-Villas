@@ -1,3 +1,32 @@
+/* Fonts */
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../assets/fonts/cinzel-v26-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../assets/fonts/cinzel-v26-latin-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../assets/fonts/cinzel-v26-latin-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZhrib2Bg-4.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
     --color-bg: #F9F9F9;
     /* Off-white */
@@ -188,14 +217,14 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
+    padding: 0.8rem 0; /* Reduced from 1.5rem */
     background: rgba(255, 255, 255, 0.0);
     transition: all 0.4s ease;
 }
 
 nav.scrolled {
     background: rgba(255, 255, 255, 0.9);
-    padding: 1rem 0;
+    padding: 0.6rem 0; /* Reduced from 1rem */
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
 }
@@ -213,13 +242,14 @@ nav.scrolled {
 }
 
 .logo img {
-    height: 70px;
+    height: 50px; /* Reduced from 80px for a sleeker nav */
     width: auto;
     transition: var(--transition);
+    object-fit: contain;
 }
 
 nav.scrolled .logo img {
-    height: 55px;
+    height: 40px; /* Reduced from 60px */
 }
 
 .nav-links {
@@ -230,12 +260,11 @@ nav.scrolled .logo img {
 
 .nav-links a {
     text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
+    font-size: 0.6rem; /* Reduced to match user's request for a smaller feel */
+    letter-spacing: 0.12em; /* Adjusted letter spacing for the smaller size */
     position: relative;
     color: var(--color-text-primary);
-    /* Charcoal by default now for light pages */
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     opacity: 0.8;
 }
 
@@ -298,14 +327,18 @@ nav:not(.scrolled) .mobile-menu-btn span {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    max-height: 80vh;
     background: var(--color-surface);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1001;
     transform: translateY(-100%);
-    transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 6rem 0 3rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .mobile-nav.active {
@@ -318,17 +351,19 @@ nav:not(.scrolled) .mobile-menu-btn span {
 }
 
 .mobile-nav-links li {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     overflow: hidden;
 }
 
 .mobile-nav-links a {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: var(--color-text-primary);
     display: block;
     transform: translateY(100%);
     transition: transform 0.5s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .mobile-nav.active .mobile-nav-links a {
@@ -381,12 +416,13 @@ nav.scrolled .theme-icon {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%; /* Extra height for parallax */
-    background-size: cover;
+    height: 100%;
+    background-size: cover; /* Large and wide on PC */
     background-position: center;
+    background-repeat: no-repeat;
     z-index: 0;
     transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-    transform: scale(1.1); /* Initial scale for zoom-out effect */
+    transform: scale(1.1);
 }
 
 body:not(.menu-open) .hero-bg.visible {
@@ -399,7 +435,6 @@ body:not(.menu-open) .hero-bg.visible {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Lighter, more modern gradient for clarity */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
     z-index: 1;
 }
@@ -413,6 +448,8 @@ body:not(.menu-open) .hero-bg.visible {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .hero h1 {
@@ -469,7 +506,7 @@ body:not(.menu-open) .hero-bg.visible {
 
 /* Page Headers (Small Hero) */
 .page-header {
-    height: 70vh;
+    height: 50vh; /* Reduced from 70vh to be more compact */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -479,7 +516,7 @@ body:not(.menu-open) .hero-bg.visible {
 }
 
 .page-header h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem; /* Slightly smaller for sub-pages */
     position: relative;
     z-index: 2;
     text-align: center;
@@ -873,11 +910,12 @@ footer .footer-logo img {
 }
 
 .footer-logo img {
-    height: 70px;
+    height: 90px;
     width: auto;
     margin-bottom: 2rem;
     opacity: 1;
     object-fit: contain;
+    filter: none; /* Keep black logo */
 }
 
 .footer-desc {
@@ -923,11 +961,110 @@ footer .footer-logo img {
     box-shadow: var(--shadow-soft);
 }
 
+/* Desktop Hero Logo */
+@media (min-width: 769px) {
+    .hero {
+        padding-top: 10vh;
+    }
+
+    .page-header {
+        padding-top: 5vh; /* Less top padding for shorter sub-page hero */
+    }
+
+    .hero-content {
+        justify-content: center;
+    }
+
+    .hero .hero-content {
+        padding-top: 35vh; /* Keep deep positioning for homepage */
+    }
+
+    .page-header .hero-content {
+        padding-top: 15vh; /* Much higher positioning for sub-pages to keep them compact */
+    }
+
+    .hero-content .hero-logo-img {
+        height: 450px !important; /* Extremely bold, centerpiece size for desktop */
+        width: auto !important;
+        margin: 0 auto 3.5rem !important;
+        display: block !important;
+        filter: none !important; 
+    }
+
+    .hero h1 {
+        font-size: 5rem !important; /* Massive typography to match the giant logo */
+        margin-bottom: 2.5rem !important;
+        letter-spacing: 0.15em !important;
+    }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     /* Prevent horizontal overflow */
     * {
         max-width: 100%;
+    }
+
+    .hero {
+        background-color: #F9F9F9;
+        height: 70vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        padding-top: 18vh !important; /* Reduced from 25vh to pull logo higher */
+        overflow: visible !important;
+    }
+
+    .page-header {
+        background-color: #F9F9F9;
+        height: 40vh !important; /* Significantly shorter for mobile subpages */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        padding-top: 10vh !important;
+        overflow: visible !important;
+    }
+
+    .hero-bg {
+        background-size: contain; /* Fit on mobile */
+        background-position: center top; /* Push building up to the top */
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero-overlay {
+        background: transparent; /* Remove dark overlay on mobile to prevent black tint */
+    }
+
+    .hero h1 {
+        color: var(--color-text-primary);
+        text-shadow: none;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-content {
+        margin-top: -2vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        z-index: 5;
+        padding: 0 1.5rem;
+    }
+
+    .hero-content .hero-logo-img {
+        height: 300px !important; /* Increased from 250px to make it wider/more impactful */
+        width: auto !important;
+        margin: 0 auto 2rem !important;
+        display: block !important;
+        filter: none !important; 
+    }
+
+    .hero .btn {
+        margin-top: 1rem;
     }
 
     .container {
@@ -946,22 +1083,6 @@ footer .footer-logo img {
 
     .mobile-menu-btn {
         display: flex;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-        padding: 0 1rem;
-    }
-
-    .hero-content {
-        width: 100%;
-        padding: 0 1rem;
-        padding-top: 8rem;
-    }
-
-    .page-header h1 {
-        font-size: 2.5rem;
-        padding: 0 1rem;
     }
 
     /* Mobile Nav Layout: Hamburger Left, Logo Center */
@@ -1039,12 +1160,12 @@ footer .footer-logo img {
     }
 
     .footer-logo img {
-        height: 55px;
+        height: 100px; /* Increased from 55px for better visibility */
         width: auto;
-        margin: 0 auto 1rem;
+        margin: 0 auto 1.5rem;
         display: block;
         object-fit: contain;
-        max-width: 200px;
+        max-width: 280px; /* Increased from 200px */
     }
 
     .footer-col {
@@ -1497,6 +1618,15 @@ footer .footer-logo img {
 }
 
 @media (max-width: 768px) {
+    .grid-about {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-image-container {
+        order: -1; /* Image appears first on mobile */
+    }
+
     .modal-img {
         height: 200px;
     }
